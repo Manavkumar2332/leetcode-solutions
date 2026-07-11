@@ -1,0 +1,22 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+   
+
+   for(int i=1; i<=5-i;i++)
+   {
+    cout<<" ";
+   }
+
+   for(int i=0; i<=2*i+1;i++)
+   {
+    cout<<"*";
+   }
+
+    for(int i=1; i<=5-i;i++)
+   {
+    cout<<" ";
+   }
+   cout<<endl;
+}
