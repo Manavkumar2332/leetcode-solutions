@@ -2,21 +2,22 @@
 using namespace std;
 int main()
 {
+   int n;
+   cin>>n;
    
-
-   for(int i=1; i<=5-i;i++)
+   for(int i=1;i<=n;i++)
    {
-    cout<<" ";
-   }
+      for(int j=0;j<n-i;j++)
+      {
+         cout<<" ";
+      }
 
-   for(int i=0; i<=2*i+1;i++)
-   {
-    cout<<"*";
-   }
+      for(int j=0;j<2*i-1;j++)
+      {
+         cout<<"*";
+      }cout<<endl;
 
-    for(int i=1; i<=5-i;i++)
-   {
-    cout<<" ";
+
+      
    }
-   cout<<endl;
 }
