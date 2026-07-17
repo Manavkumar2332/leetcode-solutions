@@ -22,4 +22,78 @@ int main()
 
     vector<int> copyv(vec1);
 
+    // we use iterator because iterator is acceptable in all containers , it is refering to address of the element
+    // to access to element we need to use star like in pointer we do 
+    vector<int> ::iterator it = v.begin();
+    it++;
+    cout<<*it<<" ";
+
+    vector<int> ::iterator it = v.end(); // it does not point to last element , it always point to after last element so to access it we need to do this --it;
+
+    vector<int> ::reverse_iterator it = v.rend(); // we dont use it in 99% cases , end ko reverse krdeta hai mtlb first element ko end ki trha treat krta hai 
+    vector<int> ::reverse_iterator it = v.rbegin(); // we dont use it in 99% cases , first ko reverse krdeta hai mtlb end wala element first bnjata hai
+
+    cout<<v[0]<< " " <<v.at(0); // both give the element of 0th position but v[0] check out of the range so can give garbadge value where as at check the index is valid or not 
+
+    cout<<v.back(); //back always return last element
+
+    for(auto it=v.begin() ; it!=v.end();it++)
+    {
+        cout<< *(it)<<" ";
+    }
+
+    for(auto it:v)
+    {
+        cout<<it<<" "; // this loop is not the iterator so we can access elements normaly without using *
+    }
+    
+    // how to erase in vector
+
+    // {10,20,30,40}
+    v.erase(v.begin()+1);//it will erase 20 
+
+    // how to erase a whole range 
+    
+    // {10,20,30,40,50}
+    v.erase(v.begin()+1,v.begin()+3); // {10,40,50} // in this end is not included but start is , like i used v.begin+3 which point 50 but use element befor it 
+
+    // insert function
+
+    vector<int> v(2,100); // it will insert 2 time 100 value in vector , {100,100}
+
+    v.insert(v.begin(),100); // it will insert 100 in the begining 
+
+    v.insert(v.begin()+1,200); // it will insert 200 in the 2nd position in vector
+
+    // what if you want to insert 2 numbers
+   v.insert(v.begin()+1,2,10); // it means v[1] position or 2 baar 10 ko laga do {100,10,10,200} somthing like this
+
+//    how to insert an vector into another
+
+vector<int> copy(2,100);
+
+  v.insert(v.begin(),copy.begin(),copy.end()); // through this we can insert one vector into another and we can also tell the range of copy vector to insert 
+
+//   {10,20,30}
+
+cout<<v.size();//2
+
+v.pop_back(); //{10,20} pop remove the last element
+
+// v1 -> {1,2}
+// v2-> {3,4}
+vector<int> v1;
+vector<int> v2;
+v1.swap(v2); // v1 - > {3,4} , v2 -> {1,2}
+
+v.clear(); //erase the whole vector
+
+v.empty(); //check weather your vector is empty or not
+
+
+
+
+
+
+
 }
