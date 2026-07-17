@@ -20,6 +20,6 @@ int main()
 
     // to copy one vector into another 
 
-    vector<int> copyv(vec1)
+    vector<int> copyv(vec1);
 
 }
