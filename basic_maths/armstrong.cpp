@@ -22,6 +22,9 @@ int main()
     {
       cout<<"number is armstrong";
     }
+    else{
+        cout<<"number is not an armstrong";
+    }
     
     
 }
