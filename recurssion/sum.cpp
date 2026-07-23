@@ -1,25 +1,23 @@
 #include<iostream>
 using namespace std;
 
-void fun(int n)
+int fun(int n)
 {
+    
     if(n==0)
     {
-        return;
+    return 0 ;
     }
 
+    
 
-
-    if(n%2!=0)
-    {
-     cout<<n<<" ";
-    }
-        fun(n-1);
+    return n+ fun(n-1);
+       
 }
 
 int main()
 {
     int n;
     cin>>n;
-    fun(n);
+    cout<<fun(n);
 }
