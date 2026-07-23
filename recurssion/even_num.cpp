@@ -8,8 +8,11 @@ void fun(int n)
         return;
     }
 
-    cout<<n<<" ";
     fun(n-1);
+    if(n%2==0)
+    {
+        cout<<n<<" ";
+    }
 }
 
 int main()
