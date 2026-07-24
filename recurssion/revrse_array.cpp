@@ -10,11 +10,6 @@ int fun(int arr[],int i)
 
      cout<<arr[i];
     fun(arr,i-1);
-
- 
-   
-
- 
 }
 
 int main()
